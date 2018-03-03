@@ -5,7 +5,7 @@ class TopicsController < ApplicationController
 
   def create
     if current_user.topics.create(topic_params)
-      #
+      #7行目何してる？
       redirect_to topics_path, notice:'投稿に成功しました'
     else
       flash.now[:alert]="投稿に失敗しました"
@@ -14,7 +14,8 @@ class TopicsController < ApplicationController
   end
 
   def index
-    @topics = Topic.all.includes(:favorite_users,)
+    @topics = Topic.all.includes(:favorite_users)
+    #
   end
 
   private
