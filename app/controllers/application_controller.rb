@@ -10,6 +10,8 @@ class ApplicationController < ActionController::Base
     # モデル名.find_byは特定の条件にマッチした最初のレコードを取得の意味https://www.sejuku.net/blog/13000参照。
     #ここではsessionで入力されたUserのテーブルのを取得し@current_userに代入している。
 
+    #github test
+
   end
 
   def logged_in?
