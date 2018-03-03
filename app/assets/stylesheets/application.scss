@@ -1,0 +1,6 @@
+@import"bootstrap-sprockets";
+@import"bootstrap";
+@import'custom';
+
+// application.scssはstylesheetを統合して全体に反映させる。
+// @import'custom'でcustom.scssを読み込んで全体に反映させている。

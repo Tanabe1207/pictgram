@@ -1,0 +1,26 @@
+<div class="topic-index-wrapper">
+  <div class="container">
+    <% @favorite_topics.each do |topic| %>
+    <!-- modelを通ってきた@favorite_topics変数を、eachで処理が終わるまで
+    |topic| に入れていく。|topic|も変数。 -->
+      <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+          <div class="topic-index-single">
+            <h2 class="topic-author">
+              <%= topic.user.name %>
+  <!-- 変数|topic|の中（もともとfavorite_topics。
+  そのもとはuserに紐づいているfavoriteに紐づいているtopicデータ。）
+  の,各々の"user"テーブルの"name"を出力する。
+ -->
+            </h2>
+            <%= image_tag topic.image.url %>
+            <%= image_tag 'icons/comment.png', class: 'topic-index-icon' %>
+            <p class="topic-text">
+              <%= topic.description %>
+            </p>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
