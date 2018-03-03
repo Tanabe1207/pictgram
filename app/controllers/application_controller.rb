@@ -11,6 +11,7 @@ class ApplicationController < ActionController::Base
     #ここではsessionで入力されたUserのテーブルのを取得し@current_userに代入している。
 
     #github test
+    #Hashi　Comment
 
   end
 
